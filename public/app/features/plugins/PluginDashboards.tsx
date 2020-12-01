@@ -47,7 +47,7 @@ export class PluginDashboards extends PureComponent<Props, State> {
         return new Promise(resolve => {
           setTimeout(() => {
             this.importNext(index + 1).then(() => {
-              resolve();
+              resolve(null);
             });
           }, 500);
         });

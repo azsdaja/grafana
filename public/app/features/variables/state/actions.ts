@@ -216,7 +216,7 @@ export const processVariableDependencies = async (variable: VariableModel, state
     const unsubscribe = store.subscribe(() => {
       if (!isWaitingForDependencies(dependencies, store.getState())) {
         unsubscribe();
-        resolve();
+        resolve(null);
       }
     });
   });
